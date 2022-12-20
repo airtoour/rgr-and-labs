@@ -27,3 +27,12 @@ body {
     left: 0;
     right: 0;
 }
+
+#time {
+    color: black;
+    text-align: right;
+    position: fixed;
+    bottom: 1;
+    right:0px;
+    font-size: 32px;
+}
