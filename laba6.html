@@ -5,42 +5,46 @@
         <title>Вайц Артур, Тимошенский Александр. ФБИ-02. Лабораторная работа 6</title>
         <link rel="stylesheet" href="laba6.css" type="text/css">
         <script>
-            console.log('Всем Привет!')
+            console.log('Всем Привет!');
 
             let x = '33';
             let s = 'яблоки';
+            //let if = 17;
             console.log('x=', x, 's=', s);
         </script>
         <script src="laba6.js"></script>
     </head>
 
     <body>
-        <div class="header">Вайц Артур, Тимошенский Александр</div>
-        <div id="student">Вайц Артур, Тимошенский Александр</div>
+        <div class="header">
+            <div id='student' onclick='showAlert2()'>Вайц Артур, Тимошенский Александр</div>
+            <div class="language">
+                <input type="button" value="ru" onclick="setRussian()">
+                 <input type="button" value="en" onclick="setEnglish()">
+            </div>
+    </div>
 
         <div class="content">
             <form>
-                <div>
+                <div id="user-data">
                     <div>
-                        <span id="your-name">Ваше Имя</span>: <input type="text" placeholder="Введите Имя">
+                        <span id="your-name">Ваше имя</span>: <input type="text" id="input-name" placeholder="Введите Имя">
                     </div>
                     <div>
-                        <span id="your-surname">Ваша Фамилия</span>: <input type="text" placeholder="Введите Фамилию">
+                        <span id="your-surname">Ваша фамилия</span>: <input type="text" id="input-surname" placeholder="Введите Фамилию">
                     </div>
                     <div>
-                        <span id="your-age">Ваш возраст</span>: <input type="text" placeholder="Введите Возраст">
+                        <span id="your-age">Ваш возраст</span>: <input type="number" id="input-age" placeholder="Введите Возраст">
                     </div>
                     <div>
-                        <input type="button" value="ru" onclick="setRussian()">
-                        <input type="button" value="en" onclick="setEnglish()">
-                        <input type="button" value="Ок" id="ok-button">
-                        <input type="reset" value="Сброс" id="reset-button">
+                        <input type="button" value="ок" id="ok-button" onclick="showAlert()">
+                        <input type="reset" value="сброс" id="reset-button">
                     </div>
                 </div>
             </form>
         </div>
 
-        <div class="footer" id="footer">
+        <div class="footer" id="footer" onclick="showAlert3()">
             Факультет  Бизнеса, ФБИ-02, 3 курс 2022г.
         </div>
     </body>
